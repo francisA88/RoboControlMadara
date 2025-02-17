@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> -->
+
+    <title>Madara Controller</title>
+</head>
+<body>
+    <header>
+        <span id="header-title">Uchiha Madara</span>
+        <div id="getaccess">
+            <span>No Access</span>
+            <button class="custom-button" id="acc-req">Gain Access</button>
+        </div>
+    </header>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2>Message</h2>
+            <p id="modalMessage">This is a message.</p>
+            <button class="close-btn" onclick="hide()">Close</button>
+        </div>
+    </div>
+    <div class="slider-container">
+        <!-- <div class="slider-wrap">
+            <label for="link1">Base Joint Pitch</label>
+            <input type="range" name="link1" id="basepitch" data-id="1" min="-90" max="90" value="0">
+        </div> -->
+
+        <div class="slider-wrap">
+            <label for="link2">Arm Link 1 Pitch</label>
+            <input type="range" name="link2" id="arm1pitch" data-id="2" min="-90" max="90" value="0">
+        </div>
+        <div class="slider-wrap">
+            <label for="link3">Arm Link 2 Pitch</label>
+            <input type="range" name="link3" id="arm2pitch" data-id="3" min="-90" max="90" value="0">
+        </div>
+    </div>
+    <br>
+    
+    <div id="container">
+        <div>Base Yaw</div>
+    </div>
+
+    <div class="slider-container slider-container2">
+        <div class="slider-wrap">
+            <label for="link4">End Effector Pitch</label>
+            <input type="range" name="link4" id="efpitch" data-id="4" min="-90" max="90" value="0">
+        </div>
+        <div class="slider-wrap">
+            <label for="link5">End Effector Yaw</label>
+            <input type="range" name="link5" id="efyaw" data-id="5" min="-90" max="90" value="0">
+        </div>
+        <div class="slider-wrap">
+            <label for="link6">End Effector Roll</label>
+            <input type="range" name="link6" id="efroll" data-id="6" min="-90" max="90" value="0">
+        </div>
+    </div>
+
+    <div class="button-field">
+        <button class="custom-button cbtn1" data-id="7">Grip</button>
+        <button class="custom-button cbtn2" data-id="8">Release</button>
+    </div>
+    <footer>By Team Madara.</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
