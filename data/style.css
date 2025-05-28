@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    box-sizing: border-box;
+    height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+/*    background-color: #362449;*/
+/*    background-color: #1e1e2e;*/
+    background-color: #334
+    /* color: #333; */
+}
+
+
+.custom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #10B981; /* Blue color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-right: 20px;
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-button:active {
+    background-color: #003f7f; /* Even darker blue on click */
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#top-header-mobile{
+    min-height: 140px;
+    background: linear-gradient(180deg, #071421, #1f3a55);display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+}
+@media screen and (min-width: 500px){
+    #top-header-mobile{
+        display: none;
+    }
+}
+#top-header-mobile h4{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+#top-header-mobile img{
+    width: 110px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+
+}
+.general-header{
+   /* display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    min-width: 100%;
+    max-width: 100%;
+    /* padding: 10px 20px; */
+    background-color: #071421;
+    color: #ffffff;
+    box-shadow: 0 3px 5px #3339;
+    min-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 6px;
+    /* padding-right: 10px; */
+}
+
+.modal-bg{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #000000cc;
+    position: fixed;
+    z-index: 99;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+.modal{
+    background: whitesmoke;
+    color: #071421;
+    /* height: 70%; */
+    width: 80%;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    line-height: 40px;
+}
+.modal > *{
+    width: 100%
+}
+.modal ul{
+    display: flex;
+    flex-direction: column;
+}
+#header-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    /* font-family: serif; */
+}
+
+.notification{
+    min-height: 40px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    background: #0e253a;
+    color: white;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+@media screen and (max-width: 600px){
+    .notification{
+        min-height: 50px;
+    }
+}
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 80%;
+}
+.slider-container2{
+    margin-top: 20px;
+}
+label{
+    font-weight: bold;
+    color: #00ff91;
+}
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-wrap{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-top: 20px;
+}
+input[type="range"] {
+    width: 150px;
+    color: #a600ff;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #aaaaaa;
+    outline: none;
+    border-radius: 4px;
+    /* overflow: hidden; */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #00d4ff;
+    height: 8px;
+}
+
+input[type="range"]::-moz-range-track {
+    background: #aaaaaa;
+    height: 8px;
+}
+
+input[type="range"]::-ms-track {
+    background: transparent;
+    border-color: transparent; 
+    color: transparent;
+    height: 8px;
+}
+
+#container {
+    margin-top: 20px;
+    width: 300px;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform-origin: 150px 150px;
+    transform: rotateX(90deg); */
+}
+/* #container {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#container div{
+    font-weight: bold;
+    color: #43ceb9;
+}
+
+.indicator {
+    width: 30px;
+    height: 30px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    /* z-index: -200; */
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    background-color: #0055ff22;
+}
+
+.button-field{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+footer{
+    min-height: 50px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #071421;
+    color: white;
+    border-radius: 7px 7px 0 0;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#getaccess{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    flex-direction: row;
+    /* flex-direction: column; */
+}
+#getaccess > div{
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+}
+#getaccess > div:first-child{
+    width: 50px;
+    flex: 0.4;
+}
+#getaccess > div:nth-child(2){
+    flex: 0.6;
+}
