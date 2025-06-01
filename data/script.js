@@ -81,19 +81,27 @@ function requestAccess() {
             show('Arm cannot be accessed at the moment. Things might have gotten out of hand.');
         }
     })
-        .then(token => {
-            console.log(token)
-            if (token["access_token"]) {
-                console.log(token);
-                console.log(token['access_token']);
-                storage['access-token'] = token['access_token'];
-                show("Access Granted!");
-                gainAccessDiv.style.display = "none";
-            }
-            else {
-                show('Access Denied. Try again later.');
-            }
+    .then(token => {
+        console.log(token)
+        if (token["access_token"]) {
+            console.log(token);
+            console.log(token['access_token']);
+            storage['access-token'] = token['access_token'];
+            show("Access Granted!");
+            gainAccessDiv.style.display = "none";
+        }
+        else {
+            show('Access Denied. Try again later.');
+        }
         })
+}
+
+function insertClass(name, dest) {
+    document.querySelector(dest).classList.add(name);
+}
+function removeClass(name, dest) {
+    document.querySelector(dest).classList.remove(name);
+    
 }
 
 async function checkAccess() {
@@ -129,8 +137,20 @@ async function checkAccess() {
 
     // return hasAccess;
     // gainAccessDiv.style.display = hasAccess ? 'none' : 'block';
-    if (!hasAccess) show("User currently has no access. Please click the button above to request");
-    else show("This user currently has access");
+    if (!hasAccess) {
+        show("User currently has no access. Please click the button above to request");
+        insertClass("denied", ".notification-text");
+        removeClass("access", ".notification-text");
+        insertClass("access-denied", ".notification-text");
+        removeClass("access-granted", ".notification-text");
+    }
+    else {
+        show("This user currently has access");
+        insertClass("access", ".notification-text");
+        removeClass("denied", ".notification-text");
+        insertClass("access-granted", ".notification-text");
+        removeClass("access-denied", ".notification-text");
+    }
     return hasAccess;
 }
 

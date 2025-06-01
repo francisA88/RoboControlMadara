@@ -75,7 +75,7 @@ footer {
     display: none;
     padding: 10px 15px;
     background-color: #1a1a3a;
-    height: 40vh;
+    height: 50vh;
     position: fixed;
     top: 60px;
     right: 0;
@@ -348,8 +348,22 @@ input[type="range"].vertical::-webkit-slider-runnable-track {
 }
 
 .access-granted{
-    background: green;
+    color: green;
 }
 .access-denied{
-    background: red;
+    color: red;
+}
+
+.notification-text{
+    color: white;
+    padding:10px 12px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.notification-text.denied{
+    background: rgb(88, 1, 1);
+}
+.notification-text.access{
+    background: green;
 }

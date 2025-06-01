@@ -15,7 +15,7 @@
             <div id="top-header-mobile">
                 <img id="mad-ems" src="sharingan.svg" alt="logo">
                 <span id="header-title">MadaraS06</span>
-                <i id="settings" class="fas fa-cog fa-spin gear"></i>
+                <i id="settings" class="fas fa-cog fa-spin gear access-denied"></i>
 
             </div>
         </header>
@@ -23,6 +23,9 @@
         <div id="getaccess">
             <div class="access-content">
                 <button class="custom-btn" id="acc-req">Gain Access</button>
+            </div>
+            <div class="notification-text denied">
+
             </div>
             <div class="team-info">
                 <p>Team Madara</p>
@@ -103,10 +106,10 @@
             }
         });
         document.querySelectorAll('input[type="range"].vertical').forEach(slider => {
-            slider.parentElement.setAttribute('data-value', slider.value);
+            slider.parentElement.setAttribute('data-value', parseInt(slider.value) + 90);
 
             slider.addEventListener('input', () => {
-                slider.parentElement.setAttribute('data-value', slider.value);
+                slider.parentElement.setAttribute('data-value', parseInt(slider.value) + 90);
             });
         });
     </script>
